@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <link rel="icon" href="imge/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="sass/style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+<style>
+    
+.sideber{ 
+    position: absolute;
+    z-index: 200;
+    width: 30%;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: #d0d0d0;
+    top:70px;
+    right: -50%;
+    height: auto;
+    transition: 0.3s;
+}
+
+.sideber.active{
+right: 0;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+<!-- sinein-form -->
+<section class="section-from">
+  <div class="container-from-1 ">
+    <button title="Close (Esc)" type="button" class="mfp-close">
+      ×
+    </button>
+    <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+      <h2> Sign Up From</h2>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email">
+      </div>
+      <div class="form-group"> 
+        <label for="email">Your Password</label>
+        <input type="password" name="Password" id="password">
+       </div>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+  <div id="status"></div>
+</section>
+
+  <!-- Popup-From -->
+  
+
+  <section class="section-from">
+    <div class="container-from ">
+      <button title="Close (Esc)" type="button" class="mfp-close">
+        ×
+      </button>
+      <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+        <h2> Register From</h2>
+        <div class="form-group-name">
+          <div class="first"> <label for="Name">First Name</label> <br>
+        <input type="text" id="Name" name="Name"> </div>
+  
+        <div class="first"> <label for="Name">Last Name</label> <br>
+           <input type="text" id="Name" name="Name"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Phone Number</label>
+          <input type="number" id="number" name="Number">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email">
+        </div>
+        <div class="form-group"> 
+          <label for="email">Your Password</label>
+          <input type="password" name="Password" id="password">
+         </div>
+        <button type="submit">Creat Account</button>
+      </form>
+    </div>
+    <div id="status"></div>
+  </section>
+
+    <!-- Header_section -->
+<header>  
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        <div class="container">
+          <a class="navbar-brand" href=""> <img src="imge/logo1.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="cetagories.html">Categories</a>
+              </li>
+        
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+              <form class="search-from d-flex mx-4">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+              </form>
+
+              <li class="nav-item">
+                <a class="nav-link"  href="#"><i style="font-size: 20px;"class="bi bi-heart  mx-4"></i> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#"> 
+                  <i style="font-size: 20px;" class="bi bi-cart4 position-relative" id="Cart-Icon"> 
+                     <span style="font-size: 10px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count"   > 1
+                     </span>
+                </i> 
+                </a>
+              </li>
+<!--  New Cart Icon -->
+    <div class="cart">  <i class="bi bi-cart4 position-relative " id="Cart-Icon" >
+      <span style="font-size:10px; " class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count" > 0
+      </span> </i> 
+    </div>
+
+              <li class="nav-item dropdown mx-4">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i style="font-size: 20px;" class="bi bi-person"></i>
+                </a>
+                <ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#" id="show-sinin-popup" >Login</a></li>
+                  <li><a  class="dropdown-item" id="show-popup">Register</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+</header>
+
+  
+
+
+
+<!--New  Add to Cart Div -->
+<div class="container new-cart-div"  id="cart">
+    <div id="root"> 
+        
+    </div>
+    <div class="sideber">
+       <div class="head"> <p> My Cart</p></div>
+       <div id="cartItem"> Your Cart Is Empty</div>
+       <div class="foot">
+        <h3> Total</h3>
+        <h2 id="total"> $ 0.00</h2>
+        <i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i>
+       </div>
+       <i class="fa-solid fa-trash cart-remove " > </i>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+<!-- Add to Cart Div -->
+
+<div class="add-to-cart-div "  id="cart">
+    <h2> Your Cart</h2>
+     <div class="cart-content "> 
+       <div class="cart-box" id="title">
+           <img class="cart-img" src="imge/6.png" alt="">
+          <div class="card-text">
+               <div class="product-title cart-product-title "> Apple</div>
+               <div class="cart-price"> $20.5</div>
+               <input type="number" value="1" class="cart-quantity">
+          </div>
+  <!-- Cart Remover -->
+         <i class="fa-solid fa-trash cart-remove " > </i>
+     </div>
+  </div>  
+       <!-- Total -->
+       <div class="total">
+         <div class="total-title">Total </div>
+         <div class="total-price">$0</div>
+     </div>
+   <button type="button" class="btn-buy"> Buy Now</button>
+   <i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i>
+  </div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer-Section -->
+<div class="footer border-top mt-3 d-flex">
+    <div class="container">
+        <div class="row">
+              <div class="col-md-3 pt-2">
+                  <div class="footer-logo"> <img src="imge/logo1.png" alt=""></div>
+                      <h4>Get The App</h4>
+                      <p> Lorem ipsum dolor sit amet consectetur</p>
+                  <div class="footer-logo"> <img src="" alt=""></div>
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul>   
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul> 
+              </div>
+              <div class="col-md-3 pt-5">
+                <h4>Contact Info </h4>
+                <p>01954311300</p>
+                <p> Lorem ipsum dolor sit amet consectetur</p>
+                <h5>hasan311300@gmail.com</h5>
+            </div>
+      </div>
+    </div>
+  </div>
+
+<div class="copyright-text text-center pb-4 pt-4"> 
+  <a href="">copyright @ 2022   </a>
+       <span class=" fw-bold text-danger"> Devoloper BY * Mehedi Hasan </span>
+</div>
+
+<!-- <div class="loding" id="loder">
+  <div class="spinner-border" role="status">
+      <span class="sr-only">  </span>
+    </div>
+   <h5>  Loading...</h5>
+</div> -->
+
+<script>
+  // setTimeout(() => {
+  //   document.getElementById('loder').style.display='none'
+  // }, 1000)
+
+
+</script>
+
+<script type="text/javascript" src="sass/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

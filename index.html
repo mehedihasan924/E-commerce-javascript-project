@@ -1,0 +1,546 @@
+<!-- https://docs.google.com/spreadsheets/d/19YJ8NsKig34dfhERq90fzL29AzuGvbMgQgrP5czh3RY/edit?resourcekey#gid=1159924437 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <link rel="icon" href="imge/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+   
+</head>
+<body>
+<!-- sinein-form -->
+<section class="section-from">
+  <div class="container-from-1 ">
+    <button title="Close (Esc)" type="button" class="mfp-close">
+      ×
+    </button>
+    <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+      <h2> Sign Up From</h2>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+      <div class="form-group"> 
+        <label for="email">Your Password</label>
+        <input type="password" name="Password" id="password" required>
+       </div>
+      <button class="register-from" type="submit">Sign In</button>
+    </form>
+  </div>
+  <div id="status"></div>
+</section>
+
+  <!-- Popup-From -->
+  <section class="section-from">
+    <div class="container-from ">
+      <button title="Close (Esc)" type="button" class="mfp-close">
+        ×
+      </button>
+      <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+        <h2> Register From</h2>
+        <div class="form-group-name">
+          <div class="first"> <label for="Name">First Name</label> <br>
+        <input type="text" id="Name" name="Name" required> </div>
+  
+        <div class="first"> <label for="Name">Last Name</label> <br>
+           <input type="text" id="Name" name="Name" required></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Phone Number</label>
+          <input type="number" id="number" name="Number" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-group"> 
+          <label for="email">Your Password</label>
+          <input type="password" name="Password" id="password" required>
+         </div>
+        <button class="register-from" type="submit">Creat Account</button>
+      </form>
+    </div>
+    <div id="status"></div>
+  </section>
+
+    <!-- Header_section -->
+<header>  
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        <div class="container">
+          <a class="navbar-brand" href=""> <img src="imge/logo1.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link "   aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="cetagories.html">Categories </a>
+              </li>
+        
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+              <form class="search-from d-flex mx-4">
+                <input class="form-control " id="myinput" type="search" placeholder="Search" >
+                <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+              </form>
+
+              <li class="nav-item">
+                <a class="nav-link"  href="#"><i style="font-size: 20px;"class="bi bi-heart  mx-4"></i> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#"> 
+                  <i style="font-size: 20px;" class="bi bi-cart4 position-relative" id="Cart-Icon"> 
+                     <span style="font-size: 10px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count"   > 0
+                     </span>
+                </i> 
+                </a>
+              </li>
+
+              <li class="nav-item dropdown mx-4">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i style="font-size: 20px;" class="bi bi-person"></i>
+                </a>
+                <ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#" id="show-sinin-popup" >Login</a></li>
+                  <li><a  class="dropdown-item" id="show-popup">Register</a></li>
+                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+</header>
+<!--New  Add to Cart Div -->
+<div class="container new-cart-div"  id="cart">
+  <!-- <div id="root">   </div> -->
+  <div class="sideber">
+     <div class="head"> <p> My Cart</p></div>
+     <div id="cartItem"> Your Cart Is Empty</div>
+     <div class="foot">
+      <h3> Total</h3>
+      <h2 id="total"> ৳ 0.00</h2>
+      <i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i> 
+  
+     </div>
+     <a target="_blank" href="https://forms.gle/AdQAarcHJe1ZQkjg8"></a> <button id="Checkout"> <a target="_blank" href="https://forms.gle/AdQAarcHJe1ZQkjg8"> Check Out  </a> </button>  </a>
+  </div>
+</div>
+
+
+<!--  search Container -->
+<div class="container" id="product-search-system" >
+  <h2 class="text-success text-center mt-5" style="font-weight: 700; font-size: 40px;" > Search Product </h2>
+   <h3  class="text-danger text-center" id="para" style="display:none ;"> Not Found</h3>
+    <div class="row mt-3" id="search-section">
+       
+    </div>
+</div>
+
+
+<!-- Slider Section -->
+<section class="slider">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="container">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-6 slider-text"> 
+                <h2 class="text-success"> Order <span class="lighten"> online</span>, <br> Save Your <span class="lighten"> Time</span> </h2>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis autem impedit sint nesciunt dignissimos pariatur? Molestiae voluptas eius delectus perspiciatis deleniti.</p>
+                  <a href="" class="btn-order-now"> Order Now <i class="bi bi-arrow-right"></i> </a>
+              </div>
+              <div class="col-md-6 slider-img">
+                <img style=" width: 500px; height: 300px;" src="imge/3.png" class="d-block w-100" alt="...">
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 slider-text"> 
+                <h2 class="text-success"> Order <span class="lighten"> online</span>, <br> Save Your <span class="lighten"> Time</span> </h2>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis autem impedit sint nesciunt dignissimos pariatur? Molestiae voluptas eius delectus perspiciatis deleniti.</p>
+                  <a href="" class="btn-order-now"> Order Now <i class="bi bi-arrow-right"></i> </a>
+              </div>
+              <div class="col-md-6 slider-img">
+                <img style=" width: 500px; height:300px;"  src="imge/electronic2.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 slider-text"> 
+                <h2 class="text-success"> Order <span class="lighten"> online</span>, <br> Save Your <span class="lighten"> Time</span> </h2>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis autem impedit sint nesciunt dignissimos pariatur? Molestiae voluptas eius delectus perspiciatis deleniti.</p>
+                  <a href="" class="btn-order-now"> Order Now <i class="bi bi-arrow-right"></i> </a>
+              </div>
+              <div class="col-md-6 slider-img">
+                <img style=" width: 500px; height: 300px;"  src="imge/Rose1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 slider-text"> 
+                <h2 class="text-success"> Order <span class="lighten"> online</span>, <br> Save Your <span class="lighten"> Time</span> </h2>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis autem impedit sint nesciunt dignissimos pariatur? Molestiae voluptas eius delectus perspiciatis deleniti.</p>
+                  <a href="" class="btn-order-now"> Order Now <i class="bi bi-arrow-right"></i> </a>
+              </div>
+              <div class="col-md-6 slider-img">
+                <img style=" width: 500px; height: 300px;"  src="imge/dress1.png" class="d-block w-100" alt="...">
+              </div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6 slider-text"> 
+                <h2 class="text-success"> Order <span class="lighten"> online</span>, <br> Save Your <span class="lighten"> Time</span> </h2>
+                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis autem impedit sint nesciunt dignissimos pariatur? Molestiae voluptas eius delectus perspiciatis deleniti.</p>
+                   <a href="" class="btn-order-now"> Order Now <i class="bi bi-arrow-right"></i> </a>
+              </div>
+              <div class="col-md-6 slider-img">
+                <img style=" width: 500px; height: 300px;"  src="imge/4.png" class="d-block w-100" alt="...">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+</section>
+<div class="container-fluid " style="background-color: rgb(73, 255, 27);">
+  <div class="row mt-1 py-1">
+     <marquee behavior=" " direction="left" scrollamount="20"> <img src="imge/ss.png" alt=""> <img src="imge/ss.png" alt="">  <img src="imge/ss.png" alt=""> <img src="imge/ss.png" alt=""></marquee>
+ 
+  </div>
+</div>
+
+
+
+<!-- Top Section -->
+<div class="container">
+  <div class="row  top-section">
+          <div class="col-md-3 top-section-1">
+              <h3><i class="fa-solid fa-bars-sort"></i> Product Cetagories </h3>
+                <ul> 
+                  <a href="fruits.html"> <li> Fruits</li></a>
+                   <a href="Clothing.html"> <li>Clothing</li></a> 
+                    <a href="Vegetable.html"><li>Vegetable</li></a>
+                   <a href="Electronic.html"> <li>Electronic</li></a>
+                    <a href="flowers.html"><li>Flowers</li> </a>
+                </ul>
+          </div>
+        <div class="col-md-6 top-section-2"> 
+              <div class="w3-content w3-section" style="max-width:500px">
+                <img class="mySlides" src="imge/daraz.jpg" style="max-width:100%">
+                <img class="mySlides" src="imge/fr22.jpg" style="max-width:100%">
+                <img class="mySlides" src="imge/mricrophone1.png" style="max-width:100%">
+                <img class="mySlides" src="imge/laptop222.png" style=" width: 500px; max-width:100%">
+                <img class="mySlides" src="imge/daraz2.jpg" style="max-width:100%">
+              </div>
+        </div>
+          <div class="col-md-3 top-section-3"> 
+                  <div class="top-section-3-img">  <img src="imge/dress4.png" alt=""></div>
+                  <div class="top-section-3-img">  <img src="imge/rose5.png" alt=""></div>
+                  <div class="top-section-3-img"> <img src="imge/microphone1.png" alt=""></div>
+            </div>
+  </div>
+</div>
+<!-- category-section  first-->
+<div class="container ">
+    <div class="section-title text-center"> 
+        <h1> All Category Products</h1>
+        <p class= "text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div class="row first-categories-section mt-1"> 
+        <div class="first-categories"> 
+          <a href="fruits.html "> 
+            <div class="inner-categories">
+                  <img src="imge/3.png" alt="">
+                <div class="inner-categories-text">
+                    <h3>Fruits </h3>
+                    <a class="view-all-btn" href="fruits.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                </div>
+            </div>
+          </a>
+        </div>
+        <div class="first-categories"> 
+          <a href="Electronic.html">
+              <div class="inner-categories">
+                    <img src="imge/lepto33.png" alt="">
+                  <div class="inner-categories-text">
+                      <h3>Electronic</h3>
+                      <a class="view-all-btn" href="Electronic.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                  </div>
+            </div>
+          </a>
+        </div>
+        <div class="first-categories"> 
+           <a href="">
+              <div class="inner-categories">
+                    <img src="imge/7.png" alt="">
+                  <div class="inner-categories-text">
+                      <h3>Vegetable </h3>
+                      <a class="view-all-btn" href="Vegetable.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                  </div>
+              </div>
+            </a>
+        </div>
+        <div class="first-categories">
+           <a href="">
+                <div class="inner-categories">
+                      <img src="imge/rose2.png" alt="">
+                    <div class="inner-categories-text">
+                        <h3> Flowers</h3>
+                        <a class="view-all-btn" href="flowers.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                    </div>
+              </div>
+            </a>
+          </div>
+        <div class="first-categories"> 
+          <a href="">
+              <div class="inner-categories">
+                      <img src="imge/dress2.png" alt="">
+                  <div class="inner-categories-text">
+                      <h3>Clothing</h3>
+                      <a class="view-all-btn" href="Clothing.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                  </div>
+            </div>
+          </a>
+        </div>
+    </div>
+</div>
+
+   
+
+<!-- category-section -->
+<!-- <section class="category-section "> 
+<div class="container">
+   <div class="section-title text-center"> 
+    <h1> All Category Products</h1>
+    <p class= "text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+   </div>
+   <div class="row fast-categores-row">
+    <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="card border-0 Categories-pro">
+                <div class="card-body">
+                    <img src="imge/3.png" alt="">
+                      <div class="card-text">
+                          <h3>Fruits</h3>
+                          <a class="view-all-btn" href="fruits.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                      </div>
+                </div>
+            </div>zzzz
+        </div> 
+        <div class="col-md-3">
+          <div class="card border-0 ">
+              <div class="card-body">
+                  <img src="imge/rose5.png" alt="">
+                    <div class="card-text">
+                        <h3>Flowers</h3>
+                        <a class="view-all-btn" href="flowers.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                    </div>
+              </div>
+          </div>
+       </div> 
+        <div class="col-md-3">
+          <div class="card border-0 ">
+              <div class="card-body">
+                  <img src="imge/7.png" alt="">
+                    <div class="card-text">
+                        <h3>Vegetable</h3>
+                        <a class="view-all-btn" href="Vegetable.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                    </div>
+              </div>
+          </div>
+       </div> 
+       <div class="col-md-1"></div>
+       
+   </div>
+
+   <div class="row mt-3">
+    <div class="col-md-3"> </div>
+          <div class="col-md-3">
+            <div class="card border-0 ">
+                <div class="card-body">
+                    <img class="card-new-img" src="imge/electric1.png" alt="">
+                      <div class="card-text">
+                          <h3>Electronic</h3>
+                          <a class="view-all-btn" href="Electronic.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                      </div>
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-3">
+          <div class="card border-0 ">
+              <div class="card-body">
+                  <img class="card-new-img" src="imge/dress2.png" alt="">
+                    <div class="card-text">
+                        <h3>Clothing</h3>
+                        <a class="view-all-btn" href="Clothing.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                    </div>
+              </div>
+          </div>
+      </div> 
+       <div class="col-md-3"></div>
+   </div>
+</div>
+
+
+</section> -->
+
+<!-- Banner-section -->
+<section class="banner mt-5">
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+          <div class="item d-flex">
+            <div class="text">
+                <p class=" p1 "> Men's Fashion</p>
+                <h2> It's Nice Clothing Item</h2>
+                <p class="item-p text-muted"> Lorem ipsum dolor sit amet <br> consectetur</p>
+                <a class="b-btn" href="order-now"> Order Now</a>
+            </div>
+            <img style="padding-left: 52px;" src="imge/dress3.png" alt="">
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="item d-flex">
+          <div class="text">
+              <p class=" p1">Electronic Item</p>
+              <h2>Best Product in Site</h2>
+              <p class=" item-p text-muted"> Lorem ipsum dolor sit amet consectetur</p>
+              <a  class="b-btn" href="order-now"> Order Now</a>
+          </div>
+          <img src="imge/leptop-banner.png" alt="">
+        </div>
+    </div>
+      </div>
+   </div>
+</div>
+</section>
+<!-- Section-product-list -->
+<section class="product-list " > 
+  <div class="container  ">
+    <h2 class=" title-tag"> Latest Products</h2>
+  <hr>
+      <div id="root-1" class="row">
+    </div>
+  </div>
+</section>
+
+<!-- Most-slale-product
+<section class="product-list" > 
+  <div class="container ">
+    <h2 class=" title-tag"> Most Sell Products</h2>
+    <hr>
+    <div id="root-2" class="row">
+     
+    </div>
+  </div>
+</section> -->
+
+
+<!-- banner-img -->
+<div class="container">
+  <div class="row">
+    <div class="banner-img text-center">
+       <div class="banner-img-h2"> <h2>  Order online, save Your Time.</h2> </div>
+      <img src="imge/banner.jpg" alt="">
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Footer-Section -->
+  <div class="footer border-top mt-3 d-flex">
+    <div class="container">
+        <div class="row">
+              <div class="col-md-3 pt-2">
+                  <div class="footer-logo"> <img src="imge/logo1.png" alt=""></div>
+                      <h4>Get The App</h4>
+                      <p> Lorem ipsum dolor sit amet consectetur</p>
+                  <div class="footer-logo"> <img src="" alt=""></div>
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul>   
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul> 
+              </div>
+              <div class="col-md-3 pt-5">
+                <h4>Contact Info </h4>
+                <p>01954311300</p>
+                <p> Lorem ipsum dolor sit amet consectetur</p>
+                <h5>hasan311300@gmail.com</h5>
+            </div>
+      </div>
+    </div>
+  </div>
+
+<div class="copyright-text text-center pb-4 pt-4"> 
+  <a href="">copyright @ 2022   </a>
+       <span class=" fw-bold text-danger"> Devoloper BY * Mehedi Hasan </span>
+</div>
+
+
+<script>
+
+
+
+
+</script>
+
+<script type="text/javascript" src="sass/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

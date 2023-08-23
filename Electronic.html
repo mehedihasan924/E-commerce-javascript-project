@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <link rel="icon" href="imge/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="sass/style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style> 
+   .card img{
+    margin-bottom: 10px;
+   }
+    </style>
+</head>
+<body>
+    <!-- sinein-form -->
+<section class="section-from">
+    <div class="container-from-1 ">
+      <button title="Close (Esc)" type="button" class="mfp-close">
+        ×
+      </button>
+      <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+        <h2> Sign Up From</h2>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email">
+        </div>
+        <div class="form-group"> 
+          <label for="email">Your Password</label>
+          <input type="password" name="Password" id="password">
+         </div>
+        <button class="register-from" type="submit">Sign In</button>
+      </form>
+    </div>
+    <div id="status"></div>
+  </section>
+  
+    <!-- Popup-From -->
+    
+  
+    <section class="section-from">
+      <div class="container-from ">
+        <button title="Close (Esc)" type="button" class="mfp-close">
+          ×
+        </button>
+        <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+          <h2> Register From</h2>
+          <div class="form-group-name">
+            <div class="first"> <label for="Name">First Name</label> <br>
+          <input type="text" id="Name" name="Name"> </div>
+    
+          <div class="first"> <label for="Name">Last Name</label> <br>
+             <input type="text" id="Name" name="Name"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Phone Number</label>
+            <input type="number" id="number" name="Number">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email">
+          </div>
+          <div class="form-group"> 
+            <label for="email">Your Password</label>
+            <input type="password" name="Password" id="password">
+           </div>
+          <button class="register-from" type="submit">Creat Account</button>
+        </form>
+      </div>
+      <div id="status"></div>
+    </section>
+
+    <!-- Header_section -->
+    <header>  
+      <nav class="navbar navbar-expand-lg navbar-light  ">
+          <div class="container">
+            <a class="navbar-brand" href=""> <img src="imge/logo1.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link "   aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="cetagories.html">Categories </a>
+                </li>
+          
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Shop</a>
+                </li>
+              </ul>
+  
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <form class="search-from d-flex mx-4">
+                  <input class="form-control " id="myinput" type="search" placeholder="Search" >
+                  <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+                </form>
+  
+                <li class="nav-item">
+                  <a class="nav-link"  href="#"><i style="font-size: 20px;"class="bi bi-heart  mx-4"></i> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#"> 
+                    <i style="font-size: 20px;" class="bi bi-cart4 position-relative" id="Cart-Icon"> 
+                       <span style="font-size: 10px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count"   > 0
+                       </span>
+                  </i> 
+                  </a>
+                </li>
+  
+                <li class="nav-item dropdown mx-4">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i style="font-size: 20px;" class="bi bi-person"></i>
+                  </a>
+                  <ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#" id="show-sinin-popup" >Login</a></li>
+                    <li><a  class="dropdown-item" id="show-popup">Register</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>  
+  </header>
+
+
+<!--New  Add to Cart Div -->
+<div class="container new-cart-div"  id="cart">
+  <!-- <div id="root">   </div> -->
+  <div class="sideber">
+     <div class="head"> <p> My Cart</p></div>
+     <div id="cartItem"> Your Cart Is Empty</div>
+     <div class="foot">
+      <h3> Total</h3>
+      <h2 id="total"> $ 0.00</h2>
+      <i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i> 
+  
+     </div>
+     <a target="_blank" href="https://forms.gle/AdQAarcHJe1ZQkjg8"></a> <button id="Checkout"> <a target="_blank" href="https://forms.gle/AdQAarcHJe1ZQkjg8"> Check Out  </a> </button>  </a>
+  </div>
+</div>
+
+<!-- Flowers All Product  Page -->
+
+
+<section class="product-list flowers-page"> 
+  <div class="container  ">
+    <div class="section-title text-center"> 
+      <h1> All Electronic Products</h1>
+      <p class= "text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      
+      <img style=" height: 250px; margin-top: 20px;" src=" product-single-page/imge/lepto33.png" alt="">
+     
+     </div>
+<!-- Section-product-list -->
+<section class="product-list " > 
+  <div class="container  ">
+
+    <div id="root-1" class="row " >
+      
+    </div>
+  </div>
+</section>
+
+
+    <!-- <div class="row ">
+      <div class="col-md-3">
+        <div class="card border-0 shadow-ms">
+            <div class="card-body  active">
+             <a href=" product-single-page/leptop.html"></a>   <img onclick="window.location.href='product-single-page/leptop.html';" class="product-img" src="imge/lepto1.png" alt="">
+                  <div class="card-text">
+                      <h2> 
+                       <a class="product-title " href=" ">Dell FHD Laptop</a>
+                      </h2>
+                      <div class="rating">
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                      </div>
+                      <h3 class="price">৳ 59,440</h3>
+                      <div class="btn-cart d-flex ">
+                        <a class="add-to-cart-btn " href=""> 
+                          <i class="bi bi-cart4  "> Add to Cart </i>
+                        </a>
+                        <a class="add-to-favorite " href="">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                      </div>
+                      
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-ms">
+          <div class="card-body">
+         <a href="product-single-page/Stand.html"><img onclick="window.location.href='product-single-page/Stand.html';" src="product-single-page/imge/Stand1.png" alt=""></a> 
+                <div class="card-text">
+                    <h2> 
+                     <a href=" "> Smartphone Stand </a>
+                    </h2>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                    </div>
+                    <h3>৳  200.00</h3>
+                    <div class="btn-cart d-flex">
+                      <a class="add-to-cart-btn" href=""> 
+                        <i class="bi bi-cart4"> Add to Cart </i>
+                      </a>
+                      <a class="add-to-favorite " href="">
+                        <i class="bi bi-heart"></i>
+                      </a>
+                    </div>
+                    
+                </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card border-0 shadow-ms">
+        <div class="card-body">
+            <img src="imge/1.png" alt="">
+              <div class="card-text">
+                  <h2> 
+                   <a href=" "> Banana</a>
+                  </h2>
+                  <div class="rating">
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                  </div>
+                  <h3>৳  200.00</h3>
+                  <div class="btn-cart d-flex">
+                    <a class="add-to-cart-btn" href=""> 
+                      <i class="bi bi-cart4"> Add to Cart </i>
+                    </a>
+                    <a class="add-to-favorite " href="">
+                      <i class="bi bi-heart"></i>
+                    </a>
+                  </div>
+                  
+              </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-3">
+  <div class="card border-0 shadow-ms">
+      <div class="card-body">
+          <img src="imge/4.png" alt="">
+            <div class="card-text">
+                <h2> 
+                 <a href=" "> Banana</a>
+                </h2>
+                <div class="rating">
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                </div>
+                <h3>৳  200.00</h3>
+                <div class="btn-cart d-flex">
+                  <a class="add-to-cart-btn" href=""> 
+                    <i class="bi bi-cart4"> Add to Cart </i>
+                  </a>
+                  <a class="add-to-favorite " href="">
+                    <i class="bi bi-heart"></i>
+                  </a>
+                </div>
+                
+            </div>
+      </div>
+  </div>
+</div>
+
+    </div> -->
+<br>
+<br>
+    <!-- <div class="row ">
+      <div class="col-md-3">
+        <div class="card border-0 shadow-ms">
+            <div class="card-body  active">
+                <img onclick="window.location.href='Product-single.html';" class="product-img" src="imge/5.png" alt="">
+                  <div class="card-text">
+                      <h2> 
+                       <a class="product-title " href=" "> Rosun</a>
+                      </h2>
+                      <div class="rating">
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                          <i class="bi bi-star-fill text-w"> </i>
+                      </div>
+                      <h3 class="price">৳  200.00</h3>
+                      <div class="btn-cart d-flex ">
+                        <a class="add-to-cart-btn " href=""> 
+                          <i class="bi bi-cart4  "> Add to Cart </i>
+                        </a>
+                        <a class="add-to-favorite " href="">
+                          <i class="bi bi-heart"></i>
+                        </a>
+                      </div>
+                      
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-0 shadow-ms">
+          <div class="card-body">
+              <img onclick="window.location.href='product-single-page/dalim.html';" src="imge/6.png" alt="">
+                <div class="card-text">
+                    <h2> 
+                     <a href=" "> Banana</a>
+                    </h2>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                    </div>
+                    <h3>৳  200.00</h3>
+                    <div class="btn-cart d-flex">
+                      <a class="add-to-cart-btn" href=""> 
+                        <i class="bi bi-cart4"> Add to Cart </i>
+                      </a>
+                      <a class="add-to-favorite " href="">
+                        <i class="bi bi-heart"></i>
+                      </a>
+                    </div>
+                    
+                </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card border-0 shadow-ms">
+        <div class="card-body">
+            <img src="imge/7.png" alt="">
+              <div class="card-text">
+                  <h2> 
+                   <a href=" "> Banana</a>
+                  </h2>
+                  <div class="rating">
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                      <i class="bi bi-star-fill text-w"> </i>
+                  </div>
+                  <h3>৳  200.00</h3>
+                  <div class="btn-cart d-flex">
+                    <a class="add-to-cart-btn" href=""> 
+                      <i class="bi bi-cart4"> Add to Cart </i>
+                    </a>
+                    <a class="add-to-favorite " href="">
+                      <i class="bi bi-heart"></i>
+                    </a>
+                  </div>
+                  
+              </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-3">
+  <div class="card border-0 shadow-ms">
+      <div class="card-body">
+          <img src="imge/8.png" alt="">
+            <div class="card-text">
+                <h2> 
+                 <a href=" "> Banana</a>
+                </h2>
+                <div class="rating">
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                    <i class="bi bi-star-fill text-w"> </i>
+                </div>
+                <h3>৳  200.00</h3>
+                <div class="btn-cart d-flex">
+                  <a class="add-to-cart-btn" href=""> 
+                    <i class="bi bi-cart4"> Add to Cart </i>
+                  </a>
+                  <a class="add-to-favorite " href="">
+                    <i class="bi bi-heart"></i>
+                  </a>
+                </div>
+                
+            </div>
+      </div>
+  </div>
+</div>
+
+    </div> -->
+  </div>
+</section>
+ 
+
+
+
+
+<!-- Footer-Section -->
+<div class="footer border-top mb-0 mt-3 d-flex ">
+    <div class="container">
+        <div class="row">
+              <div class="col-md-3 pt-2">
+                  <div class="footer-logo"> <img src="imge/logo1.png" alt=""></div>
+                      <h4>Get The App</h4>
+                      <p> Lorem ipsum dolor sit amet consectetur</p>
+                  <div class="footer-logo"> <img src="" alt=""></div>
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul>   
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul> 
+              </div>
+              <div class="col-md-3 pt-5">
+                <h4>Contact Info </h4>
+                <p>01954311300</p>
+                <p> Lorem ipsum dolor sit amet consectetur</p>
+                <h5>hasan311300@gmail.com</h5>
+            </div>
+      </div>
+    </div>
+  </div>
+
+<div class="copyright-text text-center pb-3 pt-3 "> 
+  <a href="">copyright @ 2022   </a>
+       <span class=" fw-bold text-danger"> Devoloper BY * Mehedi Hasan </span>
+</div>
+
+<script> 
+  
+// Cart-div-dynamic
+let cartIcon= document.querySelector('#Cart-Icon');
+  let cartDiv= document.querySelector('.sideber');
+  let cartClose= document.querySelector('#close-cart');
+// Open Cart
+cartIcon.onclick=()=>{
+  cartDiv.classList.add("active");
+}
+// Close Cart
+cartClose.onclick=() =>{
+  cartDiv.classList.remove("active");
+}
+
+// cart Working
+if(document.readyState == "loading"){
+  document.addEventListener("DOMContentLoaded", ready);
+}
+else{
+  ready();
+}
+
+
+// Making Function
+function ready(){
+  // Remve Item from cart
+  var removeCartButtons =document.getElementsByClassName('cart-remove')
+  // console.log(removeCartButtons);
+  for(var i= 0; i< removeCartButtons.length; i++){
+    var button=removeCartButtons[i]
+    button.addEventListener("click", removeCartItem )
+  }
+  //  Quantity Changes
+  var quantityInputs= document.getElementsByClassName('cart-quantity');
+   for ( var i =0 ; i < quantityInputs.length; i++){
+      var input=quantityInputs[i];
+      input.addEventListener("change", quantityChanged);
+   }
+  }
+
+// Letest Product
+const product=[
+  
+  {
+    id:0,
+    image:'product-single-page/imge/Stand1.png',
+    title: ' Mobile Stand',
+    price:700,
+    url:'product-single-page/e-Mobile-Stand.html',
+
+  },
+  {
+    id:1,
+    image:'product-single-page/imge/leptop3.png',
+    title: 'Dell Leptop',
+    price:56000,
+    url:'product-single-page/Dell-Leptop.html',
+
+  },
+  {
+    id:2,
+    image:'product-single-page/imge/headphone.png',
+    title: 'Mricrophone',
+    price:750,
+    url:'product-single-page/e-mricrophone.html',
+  },
+  {
+    id:3,
+    image:'product-single-page/imge/head1.png',
+    title: 'Head Phone',
+    price:600,
+    url:'product-single-page/e-Headphone.html',
+
+  },
+  {
+    id:4,
+    image:'product-single-page/imge/iron1.png',
+    title: 'New Iron',
+    price:1050,
+    url:'product-single-page/e-New-Iron.html',
+  },
+  {
+    id:5,
+    image:'product-single-page/imge/hdmi1.png',
+    title: 'HDMI Calbe',
+    price:800,
+    url:'product-single-page/e-HDMI-Calbe.html',
+
+  },
+  {
+    id:6,
+    image:'product-single-page/imge/printter1.png',
+    title: 'Printer',
+    price:9750,
+    url:'product-single-page/e-Printer.html',
+
+  },
+  {
+    id:7,
+    image:'product-single-page/imge/pc1.png',
+    title: 'Letest Dextob',
+    price: 25000,
+    url:'product-single-page/e-Letest-Dextob.html',
+
+  },
+ 
+
+];
+const categories =[...new Set(product.map((item) =>
+  {return item}))]
+let i=0;
+document.getElementById('root-1').innerHTML =categories.map((item)=>
+{
+   var { image,title, price, url} =item;
+   return(
+      `<div class="col-md-3 product-box mb-5">
+      <div class="card border-0 shadow-ms">
+          <div class="card-body active">
+              <img onclick="window.location.href='${url}';" class="product-img images" src="${image}" alt="">
+                <div class="card-text">
+                    <h2> 
+                    <a class=" product-title cart-product-title title" href=" "> ${title}</a>
+                    </h2>
+                    <div class="rating">
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                        <i class="bi bi-star-fill text-w"> </i>
+                    </div>
+                    <h3 class="price">৳ ${price}.00</h3>
+                    <div class="btn-cart d-flex " >
+                      <a class="add-to-cart-btn " > `+
+                       "<i class='bi bi-cart4' onclick='addtocart("+(i++)+")' >  Add to Cart </i>" +
+                     ` </a>
+                      <a class="add-to-favorite " >
+                        <i class="bi bi-heart "></i>
+                      </a>
+                    </div>
+                    
+                </div>
+          </div>
+      </div>
+      </div>`
+     
+   )
+}).join('')
+
+var cart=[];
+function addtocart(a){
+  cart.push({...categories_2[a]});
+  displyacart();
+}
+function addtocart(a){
+  cart.push({...categories[a]});
+  displyacart();
+}
+function delElement(a){
+  cart.splice(a,1);
+  displyacart();
+}
+
+
+ function displyacart(a){
+  let j=0, total=0;
+  document.getElementById('count').innerHTML=cart.length;
+  if(cart.length==0){
+    document.getElementById('cartItem').innerHTML= "Your  Cart Is Empty";
+    document.getElementById('total').innerHTML= "$" +0+".00";
+  }
+  else{
+    document.getElementById("cartItem").innerHTML=cart.map((items)=>
+    {
+      var {image, title, price,url} =items;
+      total=total+price;
+      document.getElementById("total").innerHTML="$"+total+".00";
+      return(
+          `<div class='cart-item'>
+              <div class='row-img'>
+                <a href="${url}  ">  <img class='rowimg' src=${image} > </a>
+              </div>
+              <p style='font-size:12px;'> ${title} </p>
+              <h2 style='font-size:15px;'>$ ${price}.00 </h2>`+
+              " <i class='fa-solid fa-trash' onclick='delElement("+(j++)+")'> </i> </div>"
+      );
+    }).join('');
+  }
+ }
+
+   //popup-from-set
+   document.querySelector("#show-sinin-popup").addEventListener("click",function(){
+  document.querySelector(".container-from-1").classList.add("active");
+  });
+  document.querySelector(".container-from-1 .mfp-close").addEventListener("click",function(){
+    document.querySelector(".container-from-1 " ).classList.remove("active");
+    });
+//Register-from
+ document.querySelector("#show-popup").addEventListener("click",function(){
+  document.querySelector(".container-from").classList.add("active");
+  });
+  document.querySelector(".container-from .mfp-close").addEventListener("click",function(){
+    document.querySelector(".container-from " ).classList.remove("active");
+    });
+
+
+</script>
+<script type="text/javascript" src="sass/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

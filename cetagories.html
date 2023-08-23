@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Shop</title>
+    <link rel="icon" href="imge/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="sass/style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- sinein-form -->
+<section class="section-from">
+    <div class="container-from-1 ">
+      <button title="Close (Esc)" type="button" class="mfp-close">
+        ×
+      </button>
+      <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+        <h2> Sign Up From</h2>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email">
+        </div>
+        <div class="form-group"> 
+          <label for="email">Your Password</label>
+          <input type="password" name="Password" id="password">
+         </div>
+        <button class="register-from" type="submit">Sign In</button>
+      </form>
+    </div>
+    <div id="status"></div>
+  </section>
+  
+    <!-- Popup-From -->
+    
+  
+    <section class="section-from">
+      <div class="container-from ">
+        <button title="Close (Esc)" type="button" class="mfp-close">
+          ×
+        </button>
+        <form action="https://formspree.io/f/mqkjwzgr" method="POST" id="my-form">
+          <h2> Register From</h2>
+          <div class="form-group-name">
+            <div class="first"> <label for="Name">First Name</label> <br>
+          <input type="text" id="Name" name="Name"> </div>
+    
+          <div class="first"> <label for="Name">Last Name</label> <br>
+             <input type="text" id="Name" name="Name"></div>
+          </div>
+          <div class="form-group">
+            <label for="email">Phone Number</label>
+            <input type="number" id="number" name="Number">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email">
+          </div>
+          <div class="form-group"> 
+            <label for="email">Your Password</label>
+            <input type="password" name="Password" id="password">
+           </div>
+          <button class="register-from" type="submit">Creat Account</button>
+        </form>
+      </div>
+      <div id="status"></div>
+    </section>
+
+    <!-- Header_section -->
+    <header>  
+      <nav class="navbar navbar-expand-lg navbar-light  ">
+          <div class="container">
+            <a class="navbar-brand" href=""> <img src="imge/logo1.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link "   aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="cetagories.html">Categories </a>
+                </li>
+          
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+  
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <form class="search-from d-flex mx-4">
+                  <input class="form-control " id="myinput" type="search" placeholder="Search" >
+                  <button class="btn btn-outline-success search-btn" type="submit">Search</button>
+                </form>
+  
+                <li class="nav-item">
+                  <a class="nav-link"  href="#"><i style="font-size: 20px;"class="bi bi-heart  mx-4"></i> </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#"> 
+                    <i style="font-size: 20px;" class="bi bi-cart4 position-relative" id="Cart-Icon"> 
+                       <span style="font-size: 10px;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="count"   > 0
+                       </span>
+                  </i> 
+                  </a>
+                </li>
+  
+                <li class="nav-item dropdown mx-4">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i style="font-size: 20px;" class="bi bi-person"></i>
+                  </a>
+                  <ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#" id="show-sinin-popup" >Login</a></li>
+                    <li><a  class="dropdown-item" id="show-popup">Register</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>  
+  </header>
+
+<!--New  Add to Cart Div -->
+<div class="container new-cart-div"  id="cart">
+  <!-- <div id="root">   </div> -->
+  <div class="sideber">
+     <div class="head"> <p> My Cart</p></div>
+     <div id="cartItem"> Your Cart Is Empty</div>
+     <div class="foot">
+      <h3> Total</h3>
+      <h2 id="total"> ৳ 0.00</h2>
+      <i class="fa-sharp fa-solid fa-xmark" id="close-cart"></i> 
+  
+     </div>
+     <a target="_blank" href="https://forms.gle/AdQAarcHJe1ZQkjg8"></a> <button id="Checkout"> <a target="_blank" href="https://forms.gle/AdQAarcHJe1ZQkjg8"> Check Out  </a> </button>  </a>
+  </div>
+</div>
+
+
+
+<!-- category-section -->
+<section class="category-section "> 
+  <div class="container">
+     <div class="section-title text-center"> 
+      <h1> Products category</h1>
+      <p class= "text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+     </div>
+     <div class="row">
+        <div class="col-md-3">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body">
+                    <img src="imge/2.png" alt="">
+                      <div class="card-text">
+                          <h3>Fruits</h3>
+                          <a class="view-all-btn" href="fruits.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                      </div>
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-3">
+          <div class="card border-0 shadow-lg">
+              <div class="card-body">
+                  <img src="imge/rose4.png" alt="">
+                    <div class="card-text">
+                        <h3>Flowers</h3>
+                        <a class="view-all-btn" href="flowers.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                    </div>
+              </div>
+          </div>
+      </div> 
+      <div class="col-md-3">
+        <div class="card border-0 shadow-lg">
+            <div class="card-body">
+                <img src="imge/6.png" alt="">
+                  <div class="card-text">
+                      <h3>Vegetable</h3>
+                      <a class="view-all-btn" href="Vegetable.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                  </div>
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-3">
+      <div class="card border-0 shadow-lg">
+          <div class="card-body">
+              <img src="imge/electronic2.png" alt="">
+                <div class="card-text">
+                    <h3>Electronic</h3>
+                    <a class="view-all-btn" href="Electronic.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                </div>
+          </div>
+      </div>
+  </div> 
+     </div>
+
+     <div class="row mt-5">
+      <div class="col-md-3">
+          <div class="card border-0 shadow-lg">
+              <div class="card-body">
+                  <img src="imge/dress3.png" alt="">
+                    <div class="card-text">
+                        <h3>Clothing</h3>
+                        <a class="view-all-btn" href="Clothing.html"> View all <i class="bi bi-arrow-right"></i> </a>
+                    </div>
+              </div>
+          </div>
+      </div> 
+      <div class="col-md-3">
+       
+
+    </div> 
+    <div class="col-md-3">
+
+  </div> 
+  <div class="col-md-3">
+   
+</div> 
+   </div>
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+<!-- Footer-Section -->
+<div class="footer border-top mb-0 mt-3 d-flex ">
+    <div class="container">
+        <div class="row">
+              <div class="col-md-3 pt-2">
+                  <div class="footer-logo"> <img src="imge/logo1.png" alt=""></div>
+                      <h4>Get The App</h4>
+                      <p> Lorem ipsum dolor sit amet consectetur</p>
+                  <div class="footer-logo"> <img src="" alt=""></div>
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul>   
+              </div>
+              <div class="col-md-3 pt-5">
+                  <h4>Information</h4>
+                    <ul class="footer-list">
+                        <li>About Us</li>
+                        <li> Contact us</li>
+                        <li> Terms & Condition</li>
+                        <li> Privacy Policy</li>
+                        <li>Shipping Policy</li> 
+                    </ul> 
+              </div>
+              <div class="col-md-3 pt-5">
+                <h4>Contact Info </h4>
+                <p>01954311300</p>
+                <p> Lorem ipsum dolor sit amet consectetur</p>
+                <h5>hasan311300@gmail.com</h5>
+            </div>
+      </div>
+    </div>
+  </div>
+
+<div class="copyright-text text-center pb-3 pt-3 "> 
+  <a href="">copyright @ 2022   </a>
+       <span class=" fw-bold text-danger"> Devoloper BY * Mehedi Hasan </span>
+</div>
+<script> 
+ 
+// Cart-div-dynamic
+let cartIcon= document.querySelector('#Cart-Icon');
+  let cartDiv= document.querySelector('.sideber');
+  let cartClose= document.querySelector('#close-cart');
+// Open Cart
+cartIcon.onclick=()=>{
+  cartDiv.classList.add("active");
+}
+// Close Cart
+cartClose.onclick=() =>{
+  cartDiv.classList.remove("active");
+}
+
+// cart Working
+if(document.readyState == "loading"){
+  document.addEventListener("DOMContentLoaded", ready);
+}
+else{
+  ready();
+}
+
+
+// Making Function
+function ready(){
+  // Remve Item from cart
+  var removeCartButtons =document.getElementsByClassName('cart-remove')
+  // console.log(removeCartButtons);
+  for(var i= 0; i< removeCartButtons.length; i++){
+    var button=removeCartButtons[i]
+    button.addEventListener("click", removeCartItem )
+  }
+  //  Quantity Changes
+  var quantityInputs= document.getElementsByClassName('cart-quantity');
+   for ( var i =0 ; i < quantityInputs.length; i++){
+      var input=quantityInputs[i];
+      input.addEventListener("change", quantityChanged);
+   }
+  }
+
+   //popup-from-set
+   document.querySelector("#show-sinin-popup").addEventListener("click",function(){
+  document.querySelector(".container-from-1").classList.add("active");
+  });
+  document.querySelector(".container-from-1 .mfp-close").addEventListener("click",function(){
+    document.querySelector(".container-from-1 " ).classList.remove("active");
+    });
+//Register-from
+ document.querySelector("#show-popup").addEventListener("click",function(){
+  document.querySelector(".container-from").classList.add("active");
+  });
+  document.querySelector(".container-from .mfp-close").addEventListener("click",function(){
+    document.querySelector(".container-from " ).classList.remove("active");
+    });
+
+</script>
+<script type="text/javascript" src="sass/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body{
+
+}
+section {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.container{
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(211, 211, 211);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px;
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%,-50%) scale(1.25);
+ transition: top 0ms ease-in-out 200ms, 
+            opacity 200ms ease-in-out 0ms,
+             transform 20ms ease-in-out 0ms;
+}
+.container.active{
+top: 50%;
+opacity: 1;
+transform: translate(-50%,-50%) scale(1);
+transition: top 0ms ease-in-out 0ms, 
+          opacity 200ms ease-in-out 0ms,
+          transform 20ms ease-in-out 0ms;
+}
+
+
+.mfp-close {
+  color: rgb(161, 42, 42);
+  font-size: 20px;
+  right: 15px;
+  top: 15px;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+}
+button.mfp-close:hover {
+  opacity: 1;
+}
+.form-group-name{
+  display: flex;
+  font-size: 20px;
+  gap: 26px;
+}
+.first{
+  width: 46%;
+  font-size: 20px;
+}
+.first input{
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  font-size: 18px;
+border: 1px solid lightgray;
+}
+
+.form-group {
+  width: 97%;
+  font-size: 20px;
+  height: auto;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid lightgray;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+button[type="submit"] {
+  width: 98%;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  color:black;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease background-color;
+  margin-left: 5px;
+}
+button[type="submit"]:hover {
+  background-color: green;
+  color: white;
+}
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 500px;
+  border-radius: 8px;
+  z-index: 200;
+}
+#status.success {
+  background-color: green;
+  animation: status 4s ease forwards;
+
+  z-index: 200;
+}
+#status.error {
+  background-color: red;
+  color: white;
+  animation: status 4s ease forwards;
+  z-index: 200;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
